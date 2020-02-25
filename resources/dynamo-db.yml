@@ -1,0 +1,15 @@
+Resources:
+  VenueListTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: venue-list
+      AttributeDefinitions:
+        - AttributeName: _id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: _id
+          KeyType: HASH
+      # Set the capacity
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
